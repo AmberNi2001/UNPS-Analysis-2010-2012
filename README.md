@@ -3,9 +3,9 @@
 | **Date**: 02-11-2025 | **Course**: Adanced Econometrics 
 
 ## Project Description
-This project analyzes microdata from the **UGA National Panel Survey** conducted over two waves between 2010 and 2012. The primary focus is on identifying **key determinants of poverty and labor force participation** with descriptive statistics and regression. Conducted in STATA, the project involves data cleaning, variable creation, dataset merging, and both descriptive and regression analyses to explore relationships between these variables and their potential correlates. 
+This project analyzes microdata from the **UGA National Panel Survey** conducted over two waves between 2010 and 2012. The primary focus is on identifying **key determinants of poverty and labor force participation** with descriptive statistics and regression. Conducted in **STATA**, the project involves data cleaning, variable creation, dataset merging, and both descriptive and regression analyses to explore relationships between these variables and their potential correlates. 
 
-The repository includes: 
+The repository **includes**: 
 1. raw survey data
 2. STATA do files
 3. output datasets
