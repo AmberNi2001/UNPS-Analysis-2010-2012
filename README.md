@@ -14,6 +14,16 @@ The repository **includes**:
 
 This work aims to support researchers, policymakers, and stakeholders interested in poverty dynamics and labor market participation trends.
 
+## How to Use This Repository
+If you'd like to **run the analysis** on your own laptop, follow these steps:
+   1. Download the ZIP file.
+   2. Open the `0_master.do` file in STATA.
+   3. Modify the global root path in the `0_master.do file` to match the directory structure. This will ensure all scripts and data files are properly linked. For example:
+      ```global root "C:/path/to/your/folder"```
+   4. Run the `0_master.do file` to execute the entire analysis workflow.
+
+If you're only **interested in viewing the code**: Simply download or browse the `.do` files directly in this repositor
+
 ## Data Source 
 I downloaded the data from [microdata.worldbank.org](https://microdata.worldbank.org/index.php/home). \
 Wave 1 (2010-2010): https://microdata.worldbank.org/index.php/catalog/2166/study-description \
