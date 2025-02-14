@@ -1,5 +1,5 @@
 # Project: Uganda National Panel Survey Analysis (2010-2012) 
-**Author**: Amber Ni
+**Author**: Amber Ni & Jessie Hu
 | **Date**: 02-11-2025 | **Course**: Adanced Econometrics 
 
 ## Project Description
@@ -15,14 +15,20 @@ The repository **includes**:
 This work aims to support researchers, policymakers, and stakeholders interested in poverty dynamics and labor market participation trends.
 
 ## How to Use This Repository
+
 If you'd like to **run the analysis** on your own laptop, follow these steps:
    1. Download the ZIP file.
-   2. Open the `0_master.do` file in STATA.
-   3. Modify the global root path in the `0_master.do file` to match the directory structure. This will ensure all scripts and data files are properly linked. For example:
+   2. All raw datasets are stored in `1_Input` ; All codes are stored in `2_Codes` ; All output datasets and the log file are stored in `3_Output`.
+   4. Open the `0_master.do` file in STATA.
+   5. Modify the global root path in the `0_master.do file` to match the directory structure. This will ensure all scripts and data files are properly linked. For example:
       ```global root "C:/path/to/your/folder"```
-   4. Run the `0_master.do file` to execute the entire analysis workflow.
+   6. Run the `0_master.do file` to execute the entire analysis workflow.
 
-If you're only **interested in viewing the code**: Simply download or browse the `.do` files directly in this repositor
+If you're only **interested in viewing the code**: Simply download or browse all the `.do` files directly under folder `2_Codes` in this repository.
+
+- Amber is responsible for analysis regarding porverty (check do files `1d_merge_UGA_wave1_HH.do`, `1e_merge_UGA_wave2_HH.do`, and `1f_merge_UGA_waves_HH.do`) 
+* Jessie is responsible for analysis regarding labor force participation (check do files `1a_merge_UGA_wave1_IND.do`, `1b_merge_UGA_wave2_IND.do`, and `1c_merge_UGA_waves_IND.do`) 
++ `0_master.do` and `2_descriptive_statistcs.do` are co-authored by Amber and Jessie.
 
 ## Data Source 
 I downloaded the data from [microdata.worldbank.org](https://microdata.worldbank.org/index.php/home). \
