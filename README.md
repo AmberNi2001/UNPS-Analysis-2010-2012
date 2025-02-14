@@ -1,4 +1,4 @@
-# Project: UGA National Panel Survey Analysis (2010-2012) 
+# Project: Uganda National Panel Survey Analysis (2010-2012) 
 **Author**: Amber Ni
 | **Date**: 02-11-2025 | **Course**: Adanced Econometrics 
 
