@@ -47,7 +47,15 @@ Author:     	Amber Ni
 ***********************************************************************************
 * HHH characteristics: Age/Sex/Maritalal Status/Edu
 ***********************************************************************************
+
+	use "$OUT/ugaIND_data_2010-2011.dta", clear
+	keep if head == 1
+	keep HHID PID sex head age married highest_edu eduYrs
+	rename (sex age married highest_edu eduYrs) (hhhSex hhhAge hhhMarital hhhHighestEdu hhhEduYrs)
+	tempfile ugaHHH
+	save `ugaHHH', replace
 	
+/*******************************************************************************	
 	* Age/Sex/Maritalal Status (2713, it is HH-level var showing HHH characteristics in each HH)
 	use "$WAVE1/GSEC2.dta", clear
 	rename (h2q3 h2q4 h2q8 h2q10) (hhhSex head hhhAge hhhMarital)
@@ -71,7 +79,7 @@ Author:     	Amber Ni
 	merge 1:1 PID using `ugahead2', keep(match master) nogen
 	tempfile ugaHHH
 	save `ugaHHH', replace
-	
+*******************************************************************************/
 	
 ***********************************************************************************
 * Electricity

@@ -1,7 +1,7 @@
 /*******************************************************************************
 Program:    0_master.do
 Note:		This file runs all the do files necessary for processing national panel survey data for country Uganda from 2010-2011 and 2011-2012
-Author:     Amber Ni & Jessie
+Author:     Amber Ni & Jessie Hu
 *******************************************************************************/
 
 *** Setup
@@ -14,7 +14,7 @@ Author:     Amber Ni & Jessie
 
 
 *** Define global macros
-global ROOT "/Users/amberni/Desktop/Grad/25Spring/Econometrics/UGA_Assignment1_AmberJessie"
+global ROOT "/Users/amberni/Desktop/UNPS_AmberJessie"
 global IN "$ROOT/1_Input"
 global WAVE1 "$IN/UGAwave1_2010-2011" 
 global WAVE2 "$IN/UGAwave2_2011-2012"
