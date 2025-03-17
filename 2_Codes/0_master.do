@@ -14,7 +14,7 @@ Author:     Amber Ni & Jessie Hu
 
 
 *** Define global macros
-global ROOT "/Users/amberni/Desktop/UNPS_AmberJessie"
+global ROOT "/Users/amberni/Desktop/Projects/UNPS_AmberJessie"
 global IN "$ROOT/1_Input"
 global WAVE1 "$IN/UGAwave1_2010-2011" 
 global WAVE2 "$IN/UGAwave2_2011-2012"
@@ -38,6 +38,8 @@ log using "$OUT/UGA_log_file", smcl replace
 *** Generate descriptive statistics
     do "$DO/2_descriptive_statistics.do"
 
+*** Generate regression 
+	do "$DO/3_analysis.do"
 		
 *** Erase intermediate data files created earlier
 	erase "$OUT/ugaHH_data_2010-2011.dta"

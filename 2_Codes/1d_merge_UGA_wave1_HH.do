@@ -101,13 +101,14 @@ Author:     	Amber Ni
 	use "$WAVE1/GSEC9A.dta", clear
 	rename (h9q3 h9q23 h9q11a h9q11b) (room_count handwash_toilet water_unit water_quant) 
 	recode handwash_toilet (1=0) (2=1) (3=2)
-	label define yesno 0 "No" 1 "Yes with water only" 2 "Yes with water and soup", replace
-	label values handwash_toilet yesno // recode Yes to 1 or 2 and No to 0
+	label define handwashing 0 "No" 1 "Yes with water only" 2 "Yes with water and soup", replace
+	label values handwash_toilet handwashing // recode Yes to 1 or 2 and No to 0
 	gen water_litres = water_quant
 	replace water_litres = water_quant * 20 if water_unit == 2 // standardize all water units to litres 
 	replace water_litres = . if water_unit == 8 // deal with missing data
+	gen logged_water = ln(water_litres) // log water litres
 	replace room_count = . if room_count == 12000 // remove an outlier
-	keep HHID room_count handwash_toilet water_litres
+	keep HHID room_count handwash_toilet logged_water
 	tempfile ugahousingetc
 	save `ugahousingetc', replace
 	
@@ -140,9 +141,10 @@ Author:     	Amber Ni
 	ren cpexp30 mexp
 	gen yexp = mexp * 12 // convert it to yearly consumption 
 	gen ypce = yexp/hhsize // compute consumption per capita
+	sum ypce // get poverty line 
 	gen ypceLn=ln(yexp/hhsize) // log consumption per capita
 	keep HHID ypceLn ypce 
-	gen poor=ypce<46233.65 // Uganda's national poverty line is currently UGX 46,233.65 per adult equivalent per year 
+	gen poor=ypce<175023.6 // arbitrarily set the poverty line at the 25th percentile of annual consumption
 	lab var poor "Household is poor under the national poverty line"
 	tempfile consumption
 	save `consumption', replace

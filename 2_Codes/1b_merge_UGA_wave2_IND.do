@@ -40,16 +40,17 @@ Author:     	Jessie Hu
 ***********************************************************************************
 	use "$WAVE2/GSEC4.dta", clear
 	ren (h4q4 h4q5 h4q7)(readwrite formal_edu highest_edu)
+	gen eduYrs = highest_edu
+	recode eduYrs (2=2) (10=0) (11=1) (12=2) (13=3) (14=4) (15=5) (16=6) (17=7) (21=8) ///
+			(22=9) (23=10) (31=11) (32=12) (33=13) (34=14) (35=15) (36=16) (99=.) ///
+			(41=8) (51=11) (61=17)
 	label drop df_READWRITE df_ATTENDSCHOOL  df_HIGHEDULEVEL df_YN  
 	recode readwrite (1=0) (2=1) (3=2) (4=3)
 	lab define df_READWRITE 0 "Unable to read and write" 1"Able to read only" 2"Able to write only" 3"Able to read and write"
 	recode formal_edu (1=0) (2=1) (3=1)
 	lab define df_ATTENDSCHOOL 0 "Never attended" 1"Have attended"
 	recode highest_edu (10=0) (11=1) (12=1) (13=1)(14=1)(15=1)(16=1)(17=2) (21=2)(22=2)(23=3) (31=2)(32=2)(33=2)(34=3)(35=3)(36=4) (41=2)(51=4) (61=5) (99=.)
-	lab define df_HIGHEDULEVEL 0"No formal education" 1"Less than primary" 2"Completed primary" 3"Completed O-level" 4" Completed A-level" 5"Completed University"
-	gen eduYrs = highest_edu
-	recode eduYrs (1=0) (10=1) (11=2) (12=3) (13=4) (14=5) (15=6) (16=7) (30=8) (31=9) ///
-			(32=10) (33=11) (34=12) (35=13) (40=8) (50=14) (61=14) (99=.) (52=.)
+	lab define df_HIGHEDULEVEL 0 "No formal education" 1 "Less than primary" 2 "Completed primary" 3"Completed O-level" 4 " Completed A-level" 5"Completed University"
 	keep HHID PID readwrite formal_edu highest_edu eduYrs
 	tempfile section4
 	save`section4', replace

@@ -84,5 +84,14 @@ Author:     	Amber Ni & Jessie Hu
 		destring HHID, replace
 		xtset HHID wave
 		xtdescribe
-		codebook hh** depRatio region urban elec room hand water meals ypce ypceLn poor if wave == 1, c
-		codebook hh** depRatio region urban elec room hand water meals ypce ypceLn poor if wave  == 2, c
+		codebook hh** depRatio region urban elec room hand logged_water meals ypce ypceLn poor if wave == 1, c
+		codebook hh** depRatio region urban elec room hand logged_water meals ypce ypceLn poor if wave  == 2, c
+		
+		ssc install asdoc
+		asdoc summarize hhsiz hhMeanAge hhMeanEduYrs hhhSex hhhMarital hhhAge hhhHighest~u ///
+           hhhEduYrs depRatio region urban elec room_count handwash_t~t ///
+           logged_water meals_day ypce ypceLn poor if wave == 1, save($OUT/des_stats_w1.doc) replace
+		asdoc summarize hhsiz hhMeanAge hhMeanEduYrs hhhSex hhhMarital hhhAge hhhHighest~u ///
+           hhhEduYrs depRatio region urban elec room_count handwash_t~t ///
+           logged_water meals_day ypce ypceLn poor if wave == 2, save($OUT/des_stats_w2.doc) replace
+
