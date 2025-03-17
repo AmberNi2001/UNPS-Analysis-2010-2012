@@ -38,28 +38,28 @@ Wave 1 (2011-2012): https://microdata.worldbank.org/index.php/catalog/2059 \
 The orginal data folder contains 98 datasets for wave 1 and 103 for wave 2, with the average number of observations exceeding 25,000.
 
 ## Workflow
-1. **Download Datasets & Organize Locally** \
-   Set up a structured folder system for raw data, scripts, outputs, and documentation.
-2. **Review Documentation** \
-   Read the Basic Information Document, Questionnaires, and Survey Reports to understand survey design, variables, and methodology.
-3. **Confirm Variables of Interest** \
-   Poverty or Per Capita Consumption: Focus on household-level analysis. \
-   Labor Force Participation: Focus on individuals aged 14+.
-4. **Identify Determinants & Correlates** \
-   Select 20-30 potential variables that influence poverty and labor force participation.
-5. **Create Variable Spreadsheet** \
-   Track variables, descriptions, coding, and any transformations.
-6. **Data Preparation** \
-   Inspect Variables: Check data types, distributions, and completeness. \
-   Clean Variables: Recode where necessary, handle missing data, correct errors, and check identifiers. \
-   Merge Datasets
-7. **Descriptive Analysis** \
-   Conduct summary statistics (mean, median, distribution) to get an overview of key variables. \
-   Visualize trends and patterns using charts or tables.
-8. **Regression Analysis** \
-   Perform summary statisitcs and investigate **pair-wise correlation**.
-   Use Machine Learning methods for variable selection, including **Stepwise** and **LASSO**. Check **multicollinearity** using **VIF**.
-   Perform regression models (**Pooled OLS, Fixed Effects, Random Effects**) to explore relationships between variables of interest and their determinants ; Compare results. \
-   Interpret coefficients and statistical significance.
+1. **Download Datasets & Organize Locally** 
+   - Set up a structured folder system for raw data, scripts, outputs, and documentation.
+2. **Review Documentation** 
+   - Read the Basic Information Document, Questionnaires, and Survey Reports to understand survey design, variables, and methodology.
+3. **Confirm Variables of Interest** 
+   - Poverty or Per Capita Consumption: Focus on household-level analysis. 
+   - Labor Force Participation: Focus on individuals aged 14+.
+4. **Identify Determinants & Correlates** 
+   - Select 20-30 potential variables that influence poverty and labor force participation.
+5. **Create Variable Spreadsheet** 
+   - Track variables, descriptions, coding, and any transformations.
+6. **Data Preparation** 
+   - Inspect Variables: Check data types, distributions, and completeness. 
+   - Clean Variables: Recode where necessary, handle missing data, correct errors, and check identifiers. 
+   - Merge Datasets
+7. **Descriptive Analysis** 
+   - Conduct summary statistics (mean, median, distribution) to get an overview of key variables. 
+   - Visualize trends and patterns using charts or tables.
+8. **Regression Analysis about Poverty in household level** 
+   - Perform summary statisitcs and investigate **pair-wise correlation**. 
+   - Use Machine Learning methods for variable selection, including **Stepwise** and **LASSO**. Check **multicollinearity** using **VIF**. 
+   - Perform regression models (**Pooled OLS, Fixed Effects, Random Effects**) to explore relationships between variables of interest and their determinants ; Compare results. 
+   - Interpret coefficients and statistical significance.
 
 
