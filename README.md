@@ -30,6 +30,8 @@ If you're only **interested in viewing the code**: Simply download or browse all
 * Jessie is responsible for analysis regarding labor force participation (check do files `1a_merge_UGA_wave1_IND.do`, `1b_merge_UGA_wave2_IND.do`, and `1c_merge_UGA_waves_IND.do`) 
 + `0_master.do` and `2_descriptive_statistcs.do` are co-authored by Amber and Jessie.
 
+You can see my final analysis slides for regressions `RegAnalysis_AN.pdf`.
+
 ## Data Source 
 I downloaded the data from [microdata.worldbank.org](https://microdata.worldbank.org/index.php/home). \
 Wave 1 (2010-2010): https://microdata.worldbank.org/index.php/catalog/2166/study-description \
