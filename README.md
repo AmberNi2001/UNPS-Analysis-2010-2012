@@ -26,7 +26,7 @@ If you'd like to **run the analysis** on your own laptop, follow these steps:
 
 If you're only **interested in viewing the code**: Simply download or browse all the `.do` files directly under folder `2_Codes` in this repository.
 
-- Amber is responsible for analysis regarding porverty (check do files `1d_merge_UGA_wave1_HH.do`, `1e_merge_UGA_wave2_HH.do`, and `1f_merge_UGA_waves_HH.do`) 
+- Amber is responsible for analysis regarding porverty (check do files `1d_merge_UGA_wave1_HH.do`, `1e_merge_UGA_wave2_HH.do`, `1f_merge_UGA_waves_HH.do`, `3_analysis.do`) 
 * Jessie is responsible for analysis regarding labor force participation (check do files `1a_merge_UGA_wave1_IND.do`, `1b_merge_UGA_wave2_IND.do`, and `1c_merge_UGA_waves_IND.do`) 
 + `0_master.do` and `2_descriptive_statistcs.do` are co-authored by Amber and Jessie.
 
